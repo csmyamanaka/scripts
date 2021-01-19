@@ -1,0 +1,69 @@
+<!--
+  Personal Setup for Openbox keybindings file
+  "keybindings.xml"
+  M. Yamanaka
+  email: myamanaka@live.com
+  website: csmyamanaka.com
+  license: MIT (See included "LICENSE" file for details)
+-->
+
+<!--
+  This a section of the openbox config where the keybindings are set.
+  You may have noticed that these keybindings recreate those used common
+  in window managers like XMonad and suckless's dwm.
+  This is because dwm and xmonad are my favourite window managers and I
+  hope that anyone using this openbox setup may gain some familiarity
+  with dwm and xmonad without having to use them right away. Once one is
+  comfortable in this environment, I believe that it may be beneficial for
+  them to eventually migrate to dwm or xmonad due to their minimalism
+  and their customizability.
+-->
+
+<keyboard>
+  <keybind key="W-1">
+    <action name="GoToDesktop"><to>1</to></action>
+  </keybind>
+  <keybind key="W-2">
+    <action name="GoToDesktop"><to>2</to></action>
+  </keybind>
+  <keybind key="W-3">
+    <action name="GoToDesktop"><to>3</to></action>
+  </keybind>
+  <keybind key="W-4">
+    <action name="GoToDesktop"><to>4</to></action>
+  </keybind>
+
+  <keybind key="W-S-c">
+    <action name="Close"></action>
+  </keybind>
+  <keybind key="W-p">
+    <action name="Execute">
+      <command>rofi -show run</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-p">
+    <action name="Execute">
+      <command>rofi -show drun</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-l">
+    <action name="Execute">
+      <command>sh ~/.local/scripts/lockscr.sh</command>
+    </action>
+  </keybind>
+  <keybind key="W-Up">
+    <action name="Execute">
+      <command>pactl set-sink-volume 0 +5%</command>
+    </action>
+  </keybind>
+  <keybind key="W-Down">
+    <action name="Execute">
+      <command>pactl set-sink-volume 0 -5%</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Return">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </keybind>
+</keyboard>
